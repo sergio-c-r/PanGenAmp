@@ -4,6 +4,7 @@ A series of Python scripts to select species-specific candidate genes for primer
 ## Input Structure
 
 -> **Roary output files**, including `core_genes`.
+
 -> A folder named `genomes/` containing `.ffn` files from Prokka.
 
 ---
@@ -12,6 +13,7 @@ A series of Python scripts to select species-specific candidate genes for primer
 
 ### `A.py`
 -> Extracts gene codes from each gene family listed in `core_genes`.
+
 -> Outputs a list of gene identifiers.
 
 ### `B.py`
@@ -20,12 +22,16 @@ A series of Python scripts to select species-specific candidate genes for primer
 
 ### `C.py`
 -> Indexes available species from [NCBI RefSeq Bacteria](https://ftp.ncbi.nlm.nih.gov/genomes/refseq/bacteria/).
+
 -> Downloads random genomes from the same genus (but not from the same species) using options -g <Genus> -s <Species> (i.e. -g Vibrio -s europaeus).
   
 ### `D.py`
 -> Concatenates downloaded genomes.
+
 -> Builds a BLAST database.
+
 -> Runs BLAST using core sequences from B.py.
+
 -> Removes matching sequences from the core dataset.
 
 ### `E.py`
@@ -33,6 +39,7 @@ A series of Python scripts to select species-specific candidate genes for primer
 
 ### `concatCDE.py`
 -> Concatenate C.py and D.py
+
 -> Runs E.py if fewer than 150 core sequences remain.
 
 ### `F.py`
@@ -52,6 +59,7 @@ A series of Python scripts to select species-specific candidate genes for primer
 
 ### `H.py`
 -> Uses Bindash to calculate Jaccard Index of candidate sequences
+
 -> Output: IS_JI_summary.txt
 
 ### `I.py`
