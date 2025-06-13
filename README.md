@@ -43,6 +43,7 @@ A series of Python scripts to select species-specific candidate genes for primer
 - Percentage identity (-p, default: 100).
 - Coverage (-c, default: 75).
 - Minimum sequence length (-l, default: 300 bp).
+
 -> Generates:
 - candidates.txt: Tab-separated BLASTN results.
 - candidates_seq.fasta: DNA sequences of candidates.
